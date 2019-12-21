@@ -285,7 +285,7 @@ void game_loop() {
     // we can't just erase the pixels before and after current position
     // because of the non-linear bird movement (it would leave 'dirty' pixels)
     Lcd.fillRect(bird.x, bird.old_y, BIRDW, BIRDH, BCKGRDCOL);
-    Lcd.drawBitmap(bird.x, bird.old_y, BIRDW, BIRDH, (uint16_t *)birdcol);
+    Lcd.drawBitmap(bird.x, bird.y, BIRDW, BIRDH, (uint16_t *)birdcol);
     tmpx = BIRDW-1;
     // save position to erase bird on next draw
     bird.old_y = bird.y;
